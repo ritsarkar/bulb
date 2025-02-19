@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Toggle</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .bulb-container {
+            text-align: center;
+        }
+        .bulb {
+            width: 100px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="bulb-container">
+        <img id="bulb" class="bulb" src="D:\bulb\bulb-off.png.png"> 
+    </div>
+
+    <script>
+        const bulb = document.getElementById('bulb');
+
+        bulb.addEventListener('click', () => {
+            if (bulb.src.includes("D:\bulb\bulb-off.png.png")) {
+                bulb.src = "D:\bulb\bulb-on.png.png";
+            } else {
+                bulb.src = "D:\bulb\bulb-off.png.png";
+            }
+        });
+    </script>
+</body>
+</html>
